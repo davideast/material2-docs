@@ -1,0 +1,44 @@
+
+<!-- Sidenav -->
+<md-sidenav-layout fullscreen>
+  <md-sidenav #sidenav>
+    <md-nav-list>
+      <a md-list-item href="#">
+        <span md-line>Guides</span>
+      </a>
+      <a md-list-item href="#">
+        <span md-line>Preview on GitHub</span>
+      </a>
+    </md-nav-list>
+  </md-sidenav>
+</md-sidenav-layout>
+
+
+<!-- Toolbar -->
+<md-toolbar color="primary">
+  <button class="toolbar__button button--full-height" md-button color="accent">
+    <a class="flex button--link" href="https://github.com/angular/material2/">
+      <img src="{{navLogoSrc}}" alt="angular logo">
+      <span class="uppercase button__text--name font-weight--300">{{navTitle}}</span>
+    </a>
+  </button>
+  
+
+  <span class="toolbar__spacer"></span>
+
+  <button class="hide-sm toolbar__button button--full-height" md-button color="accent">
+    <strong>
+      <a target="_blank" class="font-weight--400 uppercase button--link" href="#">GUIDES</a>
+    </strong>
+  </button>
+
+  <button class="hide-sm toolbar__button button--full-height" md-button color="accent">
+    <a target="_blank" class="font-weight--300 uppercase button--link" href="{{navCallToActionHref}}">{{navCallToAction}}</a>
+  </button>
+
+
+  <!--TODO: Implement Site Menu -->
+  <!--<button md-button class="button&#45;&#45;full-height button-sm uppercase font-weight&#45;&#45;300">-->
+  <!--SITE MENU-->
+  <!--</button>-->
+</md-toolbar>

@@ -1,0 +1,14 @@
+<!-- Main Section -->
+<div class="flex column flex-col--center l-main-section l-main-section-sm">
+  <div class="flex column content">
+    <div *ngFor="let feature of features; let i = index">
+      <h2 class="blue-grey-800">{{feature.title}}</h2>
+      <p>{{feature.text}}</p>
+    </div>
+  </div>
+  <div class="content__cta">
+    <button md-raised-button class="bg-teal--500 button--cta">
+      <a target="_blank" class="button--link font-weight--400 uppercase" href="{{ mainCtaHref }}">{{ mainCta }}</a>
+    </button>
+  </div>
+</div>

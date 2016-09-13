@@ -1,0 +1,18 @@
+<!-- Hero -->
+<div class="flex center vertical-center hero hero-sm width--full">
+  <div class="flex flex-col--center flex-col-sm hero__container">
+    <div class="hero__img-container">
+      <img class="width-xsm" src="{{ heroLogo }}" alt="">
+    </div>
+    <div class="hero__spacer"></div>
+    <div class="hero__text text-align--center-sm">
+      <h1 class="font-weight--400">{{ heroTitle }}</h1>
+      <p class="font-weight--300">{{ heroTagline }}</p>
+      <button md-raised-button class="button--cta">
+        <a target="_blank" class="teal--900 font-weight--400 uppercase button--link" href="{{heroCallToActionHref}}">
+          {{heroCallToAction}}
+        </a>
+      </button>
+    </div>
+  </div>
+</div>
