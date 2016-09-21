@@ -3,14 +3,18 @@
 <md-sidenav-layout>
   <md-sidenav #start>
     
+    <span class="layout-title">
+      COMPONENTS
+    </span>
     <md-list>
-      <md-list-item *ngFor="let component of components">
-        <a 
-          routerLink="/components/{{ component.name }}"
-          (click)="start.close()">
+      <a 
+        *ngFor="let component of components"
+        routerLink="/components/{{ component.name }}"
+        (click)="start.close()">
+        <md-list-item>
           {{ component.name }}
-        </a>
-      </md-list-item>
+        </md-list-item>
+      </a>
     </md-list>
 
   </md-sidenav>
