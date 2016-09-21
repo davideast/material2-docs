@@ -1,4 +1,20 @@
-<microsite-nav-bar></microsite-nav-bar>
-<microsite-hero></microsite-hero>
-<microsite-main-section></microsite-main-section>
-<microsite-footer></microsite-footer>
+<microsite-nav-bar (menuOpen)="start.open()"></microsite-nav-bar>
+
+<md-sidenav-layout>
+  <md-sidenav #start>
+    
+    <md-list>
+      <md-list-item *ngFor="let component of components">
+        <a 
+          routerLink="/components/{{ component.name }}"
+          (click)="start.close()">
+          {{ component.name }}
+        </a>
+      </md-list-item>
+    </md-list>
+
+  </md-sidenav>
+
+  <router-outlet></router-outlet>
+
+</md-sidenav-layout>

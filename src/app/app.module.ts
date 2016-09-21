@@ -16,31 +16,45 @@ import { HttpModule } from '@angular/http';
 import { MicrositeNavBarComponent } from './shared/microsite-nav-bar';
 import { MicrositeHeroComponent } from './shared/microsite-hero';
 import { MicrositeMainSectionComponent } from './shared/microsite-main-section';
+import { MicrositeFooterComponent } from './shared/microsite-footer';
 import { AppComponent } from './app.component';
+import { routing, appRoutingProviders } from './app.routing';
+import { HomeComponent } from './home/home.component';
+import { GuideComponent } from './guide/guide.component';
+import { ComponentsComponent } from './components/components.component';
+import { MdGridListModule } from '@angular2-material/grid-list';
+import { ComponentdocComponent } from './componentdoc/componentdoc.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MicrositeNavBarComponent,
     MicrositeHeroComponent,
-    MicrositeMainSectionComponent
+    MicrositeMainSectionComponent,
+    MicrositeFooterComponent,
+    HomeComponent,
+    GuideComponent,
+    ComponentsComponent,
+    ComponentdocComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     CommonModule,
-    MdButtonModule,
-    MdSidenavModule,
-    MdListModule,
-    MdCardModule,
-    MdToolbarModule,
-    MdRippleModule,
-    OverlayModule,
-    RtlModule,
-    MdIconModule
+    MdButtonModule.forRoot(),
+    MdSidenavModule.forRoot(),
+    MdListModule.forRoot(),
+    MdCardModule.forRoot(),
+    MdToolbarModule.forRoot(),
+    MdRippleModule.forRoot(),
+    OverlayModule.forRoot(),
+    RtlModule.forRoot(),
+    MdIconModule.forRoot(),
+    MdGridListModule.forRoot(),
+    routing
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

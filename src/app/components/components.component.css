@@ -1,0 +1,7 @@
+md-card {
+  display: inline-block;
+  width: 200px;
+  margin: 20px;
+  padding-bottom: 0;
+  cursor: pointer;
+}

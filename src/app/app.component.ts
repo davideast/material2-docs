@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { componentList } from './components/component-list';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular Material!';
+  title = 'Angular Material';
+  components = componentList;
 }

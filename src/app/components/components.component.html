@@ -1,0 +1,19 @@
+<!--
+<md-grid-list cols="4">
+  <md-grid-tile *ngFor="let component of components">
+    {{ component }}
+  </md-grid-tile>
+</md-grid-list>
+-->
+
+<div class="card-wrapper">
+  <a *ngFor="let component of components" routerLink="/components/{{component.name}}">
+    <md-card>
+      <md-card-header>
+        <md-card-title>{{ component.name }}</md-card-title>
+        <md-card-subtitle>{{ component.subtitle }}</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image [src]="component.imageUrl">
+    </md-card>
+  </a>
+</div>

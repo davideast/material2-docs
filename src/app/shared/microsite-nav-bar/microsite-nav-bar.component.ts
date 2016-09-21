@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { MdIconRegistry } from '@angular2-material/icon/icon';
 
 @Component({
@@ -12,4 +12,11 @@ export class MicrositeNavBarComponent {
   navTitle = 'Material';
   navCallToAction = 'Preview on GitHub';
   navCallToActionHref = 'https://github.com/angular/material2/'
+
+  @Output() menuOpen = new EventEmitter<void>();
+  
+  openMenu() {
+    this.menuOpen.emit();
+  }
+
 }
